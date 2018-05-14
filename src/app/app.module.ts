@@ -1,3 +1,5 @@
+import { ToastService } from './../services/toast/toast.service';
+import { ShoppingListService } from './../services/shopping-list/shopping-list.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -29,7 +31,9 @@ import { FIREBASE_CONFIG } from './firebase.credentials';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    FirebaseProvider
+    FirebaseProvider,
+    ShoppingListService,
+    ToastService
   ]
 })
 export class AppModule {}
